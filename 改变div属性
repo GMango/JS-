@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>控制div属性</title>
+		<style>
+			#d1{
+				height: 100px;
+				width: 400px;
+				margin: auto;
+			}
+			.b1{
+				height: 50px;
+				width: 50px;
+				background: #aaa;
+				color: #000;
+			}
+			#d2{
+				height: 100px;
+				width: 100px;
+				background: #000;
+				margin: auto;
+				display: block;
+			}
+		</style>
+		<script>
+			
+			var divControl = function (elem,attr,value)
+			{
+				elem.style[attr] = value
+				
+			};
+
+			window.onload = function ()
+			{
+				
+				var btns = document.getElementsByClassName("b1");
+				var odiv = document.getElementById("d2");
+				var attrs = ["width","height","background","display","display"];
+				var values = ["200px","200px","red","none","block"];
+
+				
+				for(var i = 0;i < btns.length;i++)
+				{
+				
+					btns[i].index = i;
+					btns[i].onclick = function ()
+					{
+
+				
+						this.index == btns.length -1 && (odiv.style.cssText = "");
+						divControl(odiv,attrs[this.index],values[this.index]);
+
+					}
+					
+				}
+				
+			};
+			
+		</script>
+	</head>
+	<body>
+	
+		<div id="d1">
+			<input type="button" name="变宽"class="b1"value="变宽"/>
+			<input type="button" name="变高"class="b1"value="变高"/>
+			<input type="button" name="变色"class="b1"value="变色"/>
+			<input type="button" name="隐藏"class="b1"value="隐藏"/>
+			<input type="button" name="重置"class="b1"value="重置"/>
+
+			</div>
+			<div id="d2"></div>
+		
+	</body>
+</html>
