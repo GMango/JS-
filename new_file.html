@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				
+			}
+			#out{
+				width: 500px;margin: 0 auto;
+			}
+	
+			
+			#red{
+				background: red;height: 10px;
+				width: 10px;
+				margin:10px;
+			}
+			#green{
+				background: green;height: 10px;
+				width: 10px;
+				margin:10px;
+				
+			}
+			#black{
+				background: black;height: 10px;
+				width: 10px;
+				margin:10px;
+				
+			}
+			ul{
+				list-style: none;
+			}
+			li{
+				float: left;
+			}
+			
+			.title{
+				background: red;text-align: center;text-emphasis-color: red;border: solid;width: 50px;height: 30px;border-color: #fff;
+			}
+			a:link,a:visited{
+				text-decoration: none;
+			}
+			.title li a{
+				color:#fff;
+				
+			}
+			.ch{
+				background: #fff!important;	}
+		</style>
+		<link href="green.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+	
+	window.onload = function ()
+		{
+			
+			var css1 = document.getElementsByTagName("link")[0];
+			var cc1 = document.getElementById("out").getElementsByTagName("li");
+			
+	
+			for(var i = 0;i < cc1.length;i++)
+			{
+		
+				cc1[i].onclick = function ()
+				{
+			
+						
+					for(var i in cc1) {
+						cc1[i].className="";
+						
+			
+					}
+					this.className="ch";
+					css1["href"]=this.id+".css"
+	
+				}
+			}
+		}
+	
+</script>
+
+
+	</head>
+	<body>
+	
+			<div id="out"><ul>
+				<li id="red" ></li>
+				<li id="green" class="ch"></li>
+				<li id="black" ></li>
+			</ul></div>
+			<br />
+			<div  id="out">
+				<ul >
+					<li class="title"><a href="">新闻</a></li>
+					<li class="title"><a href="">娱乐</a></li>
+					<li class="title"><a href="">体育</a></li>
+				</ul>
+			</div>
+	</body>
+
+</html>
