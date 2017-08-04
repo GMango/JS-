@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#qq {
+			width: 100px;height: 500px;
+			background: red;
+		}
+		
+	</style>
+	<script type="text/javascript">
+		window.onload=function()
+		{
+			var d1 = document.getElementById("qq");
+			d1.onmouseover=function(){
+				d1.style.background = "black";
+			}
+			d1.onmouseleave = function(){
+				
+				d1.style.background = "green";
+			}
+		}
+	</script>
+	<body>
+		<div id="qq"></div>
+	</body>
+</html>
