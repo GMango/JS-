@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#tips{
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var lb1 = document.getElementsByTagName("label")[0];
+				var div1 = document.getElementById("tips");
+				
+				lb1.onmouseover=function(){
+					div1.style.display="block";
+				}
+				lb1.onmouseleave=function(){
+					div1.style.display="none";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<label><input type="checkbox" name="" id="" value="" />记住密码</label>
+		<div id="tips">请勿在网吧使用此功能</div>
+	</body>
+</html>
