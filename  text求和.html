@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			strong{
+				font-size: x-large;color: red;height: 100px;width: 100px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload= function()
+			{
+				
+				var oValue =document.getElementsByTagName("input")[0];
+				var oBt=document.getElementsByTagName("button")[0];
+			
+				oValue.onkeyup = function(){
+					this.value = this.value.replace(/[^(\d)|(,)]/,"");
+					
+				}
+				oBt.onclick = function()
+				{
+				
+					var sum = 0;
+					var iValue = oValue.value.split(",");
+					for(var i in iValue)
+				      {sum += parseInt(iValue[i]);	
+			
+				     }
+					 var iSum =document.getElementsByTagName("strong")[0];
+					 iSum.innerHTML =sum;
+					
+					 
+				
+					
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<input type="text" name="" id="" value="1,2,3" />
+			<button>求和</button>
+		</div>
+		<strong></strong>
+	</body>
+</html>
