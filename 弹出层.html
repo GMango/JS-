@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			#back{
+				float: left;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0.5;
+				background: #777;
+				display: none;
+				
+			}
+		   body{
+				height: 100%;overflow: hidden;
+				
+			}
+			button{
+				margin: 0 50%;
+				width: 100px;
+				cursor: pointer;
+			}
+			#out{
+				top: 50%;
+				left: 50%;
+				width: 200px;
+				height: 100px;
+				position: absolute;
+				background: red;
+				display: none;
+			}
+			span{
+				position: relative;
+				width: 5px;height: 5px;
+				background: blue;
+				top:2px;
+				left: 185px;
+				border: solid;
+				cursor: pointer;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var bg = document.getElementById("back");
+				var bt = document.getElementsByTagName("button")[0];
+				var win = document.getElementById("out");
+				var quit = document.getElementById("quit");
+				
+				bt.onclick=function(){
+					bg.style.display="block";
+					win.style.display="block";
+					
+				}
+				quit.onclick=function(){
+					bg.style.display="none";
+					win.style.display="none";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div><button>弹出</button></div>
+		<div id="back"><div id="out"><span id="quit">X</span></div></div>
+	
+	</body>
+</html>
