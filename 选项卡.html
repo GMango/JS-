@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#out{
+				position: absolute;
+				width: 400px;margin: 10px auto;border: 1px solid;color: white;overflow: hidden;
+			}
+			strong{
+				cursor: pointer;
+				padding:20px;
+				background: black;
+			}
+			.list{
+
+				position: relative;
+				width: 400px;
+				float: left;
+			}
+			.list ul{
+
+				background: #888;
+				display: none;
+			}
+			.list ul li{
+				
+			}
+			.current{
+				background: #888;
+				color: black;
+				
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload= function(){
+				
+				var page = document.getElementsByTagName("strong");
+				var list = document.getElementsByTagName("ul");
+
+					for(var i =0 ;i<page.length;i++)
+				{
+					
+					page[i].index=i;
+					
+				page[i].onmouseover = function(){
+				
+					for(var j =0 ;j<page.length;j++) page[j].className="";
+					
+					page[this.index].className = "current";
+					for(var k =0 ;k<page.length;k++) list[k].style.display="none";
+					list[this.index].style.display="block";
+//			
+				}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="out">
+		<strong class="current">第一页</strong>
+		<strong>第二页</strong>
+		<strong>第三页</strong>
+		<div class="list">
+			<ul  style="display: block;">
+				<li>111111</li>
+				<li>111111111</li>
+				<li>11111111</li>
+				<li>111111</li>
+				<li>1111111111</li>
+			</ul>
+			<ul >
+				<li>222222222</li>
+				<li>222222</li>
+				<li>22222222222</li>
+				<li>22222222</li>
+				<li>22222222</li>
+			</ul>
+
+			<ul >
+				<li>22222222</li>
+				<li>2222222</li>
+				<li>222222222</li>
+				<li>222222222</li>
+				<li>2222222222222</li>
+			</ul>
+		</div></div>
+		
+	</body>
+</html>
